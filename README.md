@@ -9,7 +9,7 @@
 
 ## 主要贡献者:  :cupid: :cupid: :cupid:
 **计软语你讲师团**  
-讲师团成员（排名不分先后）：王少博、张文静、刘一凡、刘凯华、刘凯卫、王衍淞、韩林轩、张翼乘风、王尔聪
+讲师团成员（排名不分先后）：wsb,zwj,lkh,lkw,lyf,wec,zycf,wys,hlx
 
 ## bilibili主页：HITwh软18语你讲师团 :eyes: :eyes: :eyes:
 - https://space.bilibili.com/478354813?from=search&seid=5980619953709063940
