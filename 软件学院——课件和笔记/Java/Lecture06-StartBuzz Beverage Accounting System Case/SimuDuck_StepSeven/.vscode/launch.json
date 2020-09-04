@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DuckSimulator",
+            "request": "launch",
+            "mainClass": "StepSeven.DuckSimulator"
+        }
+    ]
+}
