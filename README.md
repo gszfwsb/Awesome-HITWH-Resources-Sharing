@@ -7,7 +7,7 @@
 2. 讲师团讲稿
 
 ## 软件学院课件&学长学姐的笔记
-contributor：wsb 
+contributor：wsb \\
 contact：181110315@stu.hit.edu.cn 
 
 ## 计软语你讲师团  负责人 wsb
