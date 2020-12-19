@@ -8,7 +8,12 @@ This project aims to provide high quality resource sharing to HITwh students
 
 ## Software college courseware & notes of senior students
 - contributor：wsb 
+
 - contact：181110315@stu.hit.edu.cn 
+
+- content：
+
+  ![image-20201219102247912](D:%5CAwesome-HITWH-Resources-Sharing%5CREADME.assets%5Cimage-20201219102247912.png)
 
 ## 计软语你讲师团  person in charge: wsb
 - bilibili homepage：HITwh软18语你讲师团 :eyes: :eyes: :eyes:
