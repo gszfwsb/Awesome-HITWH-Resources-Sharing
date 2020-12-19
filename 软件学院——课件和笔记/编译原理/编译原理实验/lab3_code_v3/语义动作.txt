@@ -1,0 +1,77 @@
+0:  P' -> P
+1:  P -> proc id ; M0 D S  {addwidth(top(tblptr),top(offset));pop(tblptr);pop(offset)}
+
+2:  P -> S
+3:  S -> S M S  {backpatch(S1.nextlist,M.quad); S.nextlist=S2.nextlist;}
+
+4:  D -> D D 
+
+
+5:  D -> T id ; {enter(top(tblptr), id.name, T.type, top(offset)); top(offset) := top(offset) + T.width}
+6:  T -> X C {T.type=C.type; T.width=C.width;}
+7:  T -> record N2 D end   {T.type := record(top(tblptr)); T.width := top(offset); pop(tblptr); pop(offset)}
+8:  X -> integer  {X.type=integer; X.width=4;}{t=X.type; w=X.width;}
+9:  X -> real  {X.type=real; X.width=8;}{t=X.type; w=X.width;}
+10:  C -> [ num ] C  {C.type=array(num.val,C1.type); C.width=num.val*C1.width;}
+11:  C -> ε  {C.type=t; C.width=w;}
+
+12:  S -> id = E ;  {p=lookup(id.lexeme); if p==nil then error; gencode(p'='E.addr);} { S.nextlist = null; } 
+13:  S -> L = E ;  {gencode(L.array'['L.offset']''='E.addr);} { S.nextlist = null; } 
+14:  E -> E + E1  {E.addr=newtemp(); gencode(E.addr'='E.addr'+'E1.addr);}
+15:  E -> E1  {E.addr=E1.addr} 
+16:  E1 -> E1 * E2  {E1.addr=newtemp(); gencode(E1.addr'='E1.addr'*'E2.addr);}
+17:  E1 -> E2  {E1.addr=E2.addr} 
+18:  E2 -> ( E )  {E2.addr=E.addr}
+19:  E2 -> - E  {E2.addr=newtemp(); gencode(E2.addr'=''uminus'E.addr);}
+20:  E2 -> id  {E2.addr=lookup(id.lexeme); if E2.addr==null then error;}
+21:  E2 -> num  {E2.addr=lookup(num.lexeme); if E2.addr==null then error}
+22:  E2 -> L {E2.addr=newtemp(); gencode(E2.addr'='L.array'['L.offset']');}
+23:  L -> id [ E ] {L.array=lookup(id.lexeme); if L.array==nil then error; L.type=L.array.type.elem; L.offset=newtemp(); gencode(L.offset'='E.addr'*'L.type.width);}
+24:  L -> L [ E ]  {L.array=L1.array; L.type=L1.type.elem; t=newtemp(); gencode(t'='E.addr'*'L.type.width); L.offset=newtemp(); gencode(L.offset'='L1.offset'+'t);}
+
+25:  B -> B or M B1  {backpatch(B1.falselist,M.quad); B.truelist=merge(B1.truelist,B2.truelist); B.falselist=B2.falselist}
+26:  B -> B1  {B.truelist := B1.truelist; B.falselist := B1.falselist}
+27:  B1 -> B1 and M B2  {backpatch(B1.truelist, M.quad); B.truelist := B2.truelist; B.falselist := merge(B1.falselist, B2.falselist)}
+28:  B1 -> B2  {B.truelist := B1.truelist; B.falselist := B1.falselist}
+29:  B2 -> not B  {B.truelist := B1.falselist; B.falselist := B1.truelist}
+30:  B2 -> ( B )  {B.truelist := B1.truelist; B.falselist := B1.falselist}
+31:  B2 -> E R E  {B.truelist :=makelist(nextquad); B.falselist := makelist(nextquad+1); gencode('if' E1.addr relop.opE1.addr 'goto –'); gencode('goto –')}
+32:  B2 -> true  {B.truelist := makelist(nextquad); gencode('goto –')}
+33:  B2 -> false  {B.falselist := makelist(nextquad); gencode('goto –')}
+
+34:  R -> <
+35:  R -> <=
+36:  R -> ==
+37:  R -> !=
+38:  R -> >
+39:  R -> >=
+ 
+40:  S -> S1  {S.nextlist:=L.nextlist}
+41:  S -> S2  {S.nextlist:=L.nextlist}
+42:  S1 -> if B then M S1 N else M S1  {backpatch(B.truelist, M1.quad);backpatch(B.falselist, M2.quad); 
+                                     S.nextlist := merge(S1.nextlist, merge(N.nextlist, S2.nextlist))}
+43:  S1 -> while M B do M S0  {backpatch(S1.nextlist, M1.quad); backpatch(B.truelist,M2.quad);S.nextlist:=B.falselist; gencode('goto'M1.quad)}
+44:  S2 -> if B then M S1 N else M S2  {backpatch(B.truelist, M1.quad); backpatch(B.falselist, M2.quad); 
+										S.nextlist := merge(S1.nextlist, merge(N.nextlist, S2.nextlist))}
+45:  S2 -> if B then M S0  {backpatch(B.truelist, M.quad); S.nextlist := merge(B.falselist, S1.nextlist)}
+
+46:  S0 -> begin S3 end  {S.nextlist:=L.nextlist}
+47:  S1 -> begin S3 end  {S.nextlist:=L.nextlist}
+48:  S2 -> begin S3 end  {S.nextlist:=L.nextlist}
+49:  S3 -> S3 ; M S  {backpatch(L1.nextlist, M.quad); L.nextlist := S.nextlist}
+50:  S3 -> S  {S.nextlist:=L.nextlist}
+
+51:  M0 -> ε  {t := mktable(nil);push(t, tblptr); push(0, offset)}
+52:  M -> ε  {M.quad := nextquad}
+53:  N -> ε  {N.nextlist := makelist(nextquad); gencode('goto –')}
+
+54:  S -> call id ( EL ) ;  {n=0; for queue中的每个t do {gencode('param't); n=n+1} gencode('call'id.addr','n);} {S.nextlist=null;} 
+55:  EL -> EL , E  {将E.addr添加到queue的队尾}
+56:  EL -> E  {初始化queue,然后将E.addr加入到queue的队尾}
+
+
+4-1： D -> proc id; N1 D S {t:= top(tblptr);addwidth(t, top(offset));pop(tblptr); pop(offset); enterproc(top(tblptr), id.name,t)}
+
+4-2：N1 -> ε {t:= mktable(top(tblptr)); push(t, tblptr); push(0, offset)}
+
+7-1：N2 -> ε {t:= mktable(nil); push(t, tblptr); push(0, offset)}

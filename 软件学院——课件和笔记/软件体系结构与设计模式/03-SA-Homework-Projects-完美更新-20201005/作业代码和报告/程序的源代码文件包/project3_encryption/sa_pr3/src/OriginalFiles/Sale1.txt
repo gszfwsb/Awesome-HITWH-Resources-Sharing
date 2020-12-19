@@ -1,0 +1,129 @@
+Television $3800 Japan 95-12-11 
+Television $3600 Germany 88-12-01
+Microwave $3800 Japan 95-12-11 
+Microwave $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Microwave $3800 Republic of China 95-12-11 
+Microwave $3300 Germany 89-02-01
+Washing Machine $3800 Japan 95-12-11 
+Washing Machine $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Washing Machine $3800 Republic of China 95-12-11 
+Washing Machine $3300 Germany 89-02-01
+Television $3800 Japan 95-12-11 
+Television $3600 Germany 88-12-01
+Microwave $3800 Japan 95-12-11 
+Microwave $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Microwave $3800 Republic of China 95-12-11 
+Microwave $3300 Germany 89-02-01
+Washing Machine $3800 Japan 95-12-11 
+Washing Machine $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Washing Machine $3800 Republic of China 95-12-11 
+Washing Machine $3300 Germany 89-02-01
+Television $3800 Japan 95-12-11 
+Television $3600 Germany 88-12-01
+Microwave $3800 Japan 95-12-11 
+Microwave $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Microwave $3800 Republic of China 95-12-11 
+Microwave $3300 Germany 89-02-01
+Washing Machine $3800 Japan 95-12-11 
+Washing Machine $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Washing Machine $3800 Republic of China 95-12-11 
+Washing Machine $3300 Germany 89-02-01
+Television $3800 Japan 95-12-11 
+Television $3600 Germany 88-12-01
+Microwave $3800 Japan 95-12-11 
+Microwave $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Microwave $3800 Republic of China 95-12-11 
+Microwave $3300 Germany 89-02-01
+Washing Machine $3800 Japan 95-12-11 
+Washing Machine $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Washing Machine $3800 Republic of China 95-12-11 
+Washing Machine $3300 Germany 89-02-01
+Television $3800 Japan 95-12-11 
+Television $3600 Germany 88-12-01
+Microwave $3800 Japan 95-12-11 
+Microwave $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Microwave $3800 Republic of China 95-12-11 
+Microwave $3300 Germany 89-02-01
+Washing Machine $3800 Japan 95-12-11 
+Washing Machine $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Washing Machine $3800 Republic of China 95-12-11 
+Washing Machine $3300 Germany 89-02-01
+Television $3800 Japan 95-12-11 
+Television $3600 Germany 88-12-01
+Microwave $3800 Japan 95-12-11 
+Microwave $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Microwave $3800 Republic of China 95-12-11 
+Microwave $3300 Germany 89-02-01
+Washing Machine $3800 Japan 95-12-11 
+Washing Machine $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Washing Machine $3800 Republic of China 95-12-11 
+Washing Machine $3300 Germany 89-02-01
+Television $3800 Japan 95-12-11 
+Television $3600 Germany 88-12-01
+Microwave $3800 Japan 95-12-11 
+Microwave $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Microwave $3800 Republic of China 95-12-11 
+Microwave $3300 Germany 89-02-01
+Washing Machine $3800 Japan 95-12-11 
+Washing Machine $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Washing Machine $3800 Republic of China 95-12-11 
+Washing Machine $3300 Germany 89-02-01
+Television $3800 Japan 95-12-11 
+Television $3600 Germany 88-12-01
+Microwave $3800 Japan 95-12-11 
+Microwave $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Microwave $3800 Republic of China 95-12-11 
+Microwave $3300 Germany 89-02-01
+Washing Machine $3800 Japan 95-12-11 
+Washing Machine $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Washing Machine $3800 Republic of China 95-12-11 
+Washing Machine $3300 Germany 89-02-01
+Television $3800 Japan 95-12-11 
+Television $3600 Germany 88-12-01
+Microwave $3800 Japan 95-12-11 
+Microwave $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Microwave $3800 Republic of China 95-12-11 
+Microwave $3300 Germany 89-02-01
+Washing Machine $3800 Japan 95-12-11 
+Washing Machine $3600 Germany 88-12-01
+Television $3800 Republic of China 95-12-11 
+Television $3300 Germany 89-02-01
+Washing Machine $3800 Republic of China 95-12-11 
+Washing Machine $3300 Germany 89-02-01
+
+
+

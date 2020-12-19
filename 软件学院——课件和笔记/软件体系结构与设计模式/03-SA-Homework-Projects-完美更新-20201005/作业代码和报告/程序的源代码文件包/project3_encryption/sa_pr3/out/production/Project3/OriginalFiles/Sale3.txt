@@ -1,0 +1,56 @@
+  Printer $3300 Germany 89-02-01
+  Refrigerator $3800 Republic of China 95-12-11
+  Printer $3600 Germany 88-12-01
+  Refrigerator $3300 Germany 89-02-01
+  Refrigerator $3300 Germany 89-02-01
+  Printer $3800 Japan 1995-12-11 
+  Refrigerator $3600 Germany 88-12-01  
+  Computer $7200 Republic of China 95-12-11  
+  Refrigerator $3800 Japan 95-12-11
+  Computer $6800 Republic of China 87-12-11
+  Washing Machine $3800 Republic of China 95-12-11
+  TV $13300 Germany 78-02-01  
+  TV $8600 Germany 79-12-01
+  Washing Machine $3800 Japan 67-12-11
+  Printer $3300 Germany 89-02-01
+  Refrigerator $3800 Republic of China 95-12-11
+  Printer $3600 Germany 88-12-01
+  Refrigerator $3300 Germany 89-02-01
+  Refrigerator $3300 Germany 89-02-01
+  Printer $3800 Japan 1995-12-11 
+  Refrigerator $3600 Germany 88-12-01
+  Computer $7200 Republic of China 95-12-11
+  Refrigerator $3800 Japan 95-12-11
+  Computer $6800 Republic of China 87-12-11
+  Washing Machine $3800 Republic of China 95-12-11
+  TV $13300 Germany 78-02-01  
+  TV $8600 Germany 79-12-01
+  Washing Machine $3800 Japan 67-12-11
+  Printer $3300 Germany 89-02-01
+  Refrigerator $3800 Republic of China 95-12-11
+  Printer $3600 Germany 88-12-01
+  Refrigerator $3300 Germany 89-02-01
+  Refrigerator $3300 Germany 89-02-01
+  Printer $3800 Japan 1995-12-11  
+  Refrigerator $3600 Germany 88-12-01 
+  Computer $7200 Republic of China 95-12-11
+  Refrigerator $3800 Japan 95-12-11
+  Computer $6800 Republic of China 87-12-11
+  Washing Machine $3800 Republic of China 95-12-11
+  TV $13300 Germany 78-02-01  
+  TV $8600 Germany 79-12-01
+  Washing Machine $3800 Japan 67-12-11
+  Printer $3300 Germany 89-02-01
+  Refrigerator $3800 Republic of China 95-12-11
+  Printer $3600 Germany 88-12-01
+  Refrigerator $3300 Germany 89-02-01
+  Refrigerator $3300 Germany 89-02-01
+  Printer $3800 Japan 1995-12-11  
+  Refrigerator $3600 Germany 88-12-01  
+  Computer $7200 Republic of China 95-12-11
+  Refrigerator $3800 Japan 95-12-11
+  Computer $6800 Republic of China 87-12-11
+  Washing Machine $3800 Republic of China 95-12-11
+  TV $13300 Germany 78-02-01 
+  TV $8600 Germany 79-12-01
+  Washing Machine $3800 Japan 67-12-11

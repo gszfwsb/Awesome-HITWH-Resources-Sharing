@@ -1,0 +1,618 @@
+From: <ÓÉ Windows Internet Explorer 7 ±£´æ>
+Subject: Using Input and Output Streams
+Date: Tue, 11 Mar 2008 21:44:46 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C883C1.1FDF8C10"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3198
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C883C1.1FDF8C10
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://scv.bu.edu/Doc/Java/tutorial/java/io/streampairs.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--NewPage--><HTML><HEAD><TITLE>Using Input and Output Streams</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3Dgb2312">
+<META content=3D"MSHTML 6.00.6000.16608" name=3DGENERATOR></HEAD>
+<BODY>
+<TABLE width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD align=3Dleft><A=20
+      =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/overview.html"><IMG=20
+      height=3D26 alt=3D"Previous | "=20
+      =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/PreviousArrow.gif"=20
+      width=3D26 align=3Dbottom border=3D0></A><A=20
+      =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/filtered.html"><IMG=20
+      height=3D26 alt=3D"Next | "=20
+      src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/NextArrow.gif" =
+width=3D26=20
+      align=3Dbottom border=3D0></A><A=20
+      href=3D"http://scv.bu.edu/Doc/Java/tutorial/index.html"><IMG =
+height=3D26=20
+      alt=3D"Trail Map | "=20
+      src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/WayUpArrow.gif" =
+width=3D26=20
+      align=3Dbottom border=3D0></A><A=20
+      href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/index.html"><IMG =
+height=3D26=20
+      alt=3D"Writing Java Programs | "=20
+      src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/javaHeader.gif" =
+width=3D26=20
+      align=3Dbottom border=3D0></A> </TD>
+    <TD align=3Dright><A=20
+      =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/index.html"><STRONG><=
+EM>Input=20
+      and Output Streams</EM></STRONG></A> </TD></TR></TBODY></TABLE>
+<P>
+<HR SIZE=3D4>
+
+<H2>Using Input and Output Streams </H2>
+<P>
+<BLOCKQUOTE>This page illustrates how to use the many of java.io input =
+and=20
+  output streams through the use of several examples. Click on the links =
+below=20
+  to get to the section you're interested in:=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/streampairs.html#PIPE=
+D">Using=20
+    Piped Streams</A>=20
+    <LI><A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/streampairs.html#FILE=
+S">Using=20
+    Streams to Read and Write Files</A>=20
+    <LI><A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/streampairs.html#MEMO=
+RY">Using=20
+    Streams to Read and Write Memory Locations</A>=20
+    <LI><A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/streampairs.html#CAT"=
+>Using=20
+    Streams to Concatenate Files</A> </LI></UL><A name=3DPIPED>
+  <H4>Using Piped Streams</H4></A>
+  <BLOCKQUOTE>The java.io package contains two classes, PipedInputStream =
+and=20
+    PipedOutputStream, that implements the input and output components =
+of a=20
+    pipe. Pipes are used to channel the output from one program (or =
+thread or=20
+    code block) into the input of another. A PipedOutputStream must be =
+connected=20
+    to a PipedInputStream and vice versa.=20
+    <P>Piped input and output streams are convenient for methods that =
+produce=20
+    output to be used as input by someone else. For example, suppose =
+that you=20
+    were writing a class that implemented various text utilities such as =
+
+    sorting, extracting unique lines, and reversing text. It would be =
+nice if=20
+    (IWBNI) the output of one of these methods could be used as the =
+input for=20
+    another. Thus you could string a series of these methods together to =
+perform=20
+    some function. The pipe shown here uses reverse, sort, and reverse =
+on a list=20
+    of words to create a list of rhyming words.=20
+    <BLOCKQUOTE><PRE>list of words -&gt; reverse -&gt; sort -&gt; =
+reverse -&gt; rhyming words
+</PRE></BLOCKQUOTE>Without piped streams, you would have to create =
+temporary=20
+    files between each step:=20
+    <BLOCKQUOTE><PRE>list of words -&gt; reverse -&gt; tmpfile
+tmpfile -&gt; sort -&gt; tmpfile2
+tmpfile2 - &gt; reverse -&gt; rhyming words
+</PRE></BLOCKQUOTE>Let's look at a class that implements the reverse and =
+
+    sort methods using piped streams and a test program that uses the =
+reverse=20
+    and sort methods in the pipe shown above to generate a list of =
+rhyming=20
+    words.=20
+    <P>First, the <A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/betaclasses/StringUti=
+ls.java">StringUtils</A>=20
+    class contains two methods, <CODE>reverse()</CODE> and =
+<CODE>sort()</CODE>,=20
+    designed to be used in a pipe. Both <CODE>reverse()</CODE> and=20
+    <CODE>sort</CODE> read data from an InputStream, process it (either=20
+    reversing the strings within it, or sorting it, and produce a=20
+    PipedInputStream suitable for another method to read. Let's look in =
+detail=20
+    at <CODE>reverse()</CODE>; the <CODE>sort()</CODE> method is very =
+similar to=20
+    <CODE>reverse()</CODE> and doesn't warrant it's own discussion.=20
+    <BLOCKQUOTE><PRE>public static InputStream reverse(InputStream =
+source) {
+    PipedOutputStream ps =3D null;
+    PipedInputStream is =3D null;
+
+    try {
+        DataInputStream dis =3D new DataInputStream(source);
+        String input;
+
+        ps =3D new PipedOutputStream();
+        is =3D new PipedInputStream(ps);
+        PrintStream os =3D new PrintStream(ps);
+
+        while ((input =3D dis.readLine()) !=3D null) {
+	    os.println(reverseString(input));
+        }
+        os.close();
+    } catch (Exception e) {
+        System.out.println("StringUtils reverse: " + e);
+    }
+    return is;
+}
+</PRE></BLOCKQUOTE>The <CODE>reverse()</CODE> method takes an =
+InputStream=20
+    which contains a list of strings to be reversed. =
+<CODE>reverse()</CODE> maps=20
+    a DataInputStream onto the <CODE>source</CODE> InputStream so that =
+it can=20
+    use the DataInputStream's <CODE>readLine()</CODE> method to read =
+each line=20
+    from the file.=20
+    <P>Next, <CODE>reverse()</CODE> creates a PipedOutputStream and =
+connects a=20
+    PipedInputStream to it. Remember that a PipedOutputStream must be =
+connected=20
+    to a PipedInputStream and vice versa. Then <CODE>reverse()</CODE> =
+maps a=20
+    PrintStream onto the PipedOutputStream so that it can use the =
+PrintStream's=20
+    <CODE>println()</CODE> method to write strings to the =
+PipedOutputStream.=20
+    <P>Now, <CODE>reverse()</CODE> reads the input line by line from the =
+
+    <CODE>source</CODE> stream, reverses each line using the=20
+    <CODE>reverseString()</CODE> method, and then writes the reversed =
+string to=20
+    the PipedOutputStream.=20
+    <P>When <CODE>reverse()</CODE> closes the PipedOutputStream, all the =
+data=20
+    written to the PipedOutputStream, gets flused into the =
+PipedInputStream=20
+    connected to it. The PipedInputStream is now filled with a list of =
+words=20
+    that have been reversed and is primed for reading by another method, =
+program=20
+    or thread. <CODE>reverse()</CODE> returns the PipedInputStream for =
+use by=20
+    the calling program.=20
+    <P>The <CODE>sort()</CODE> method follows the same pattern:=20
+    <UL>
+      <LI>open piped output stream=20
+      <LI>connect piped input stream to it=20
+      <LI>write to the piped output stream=20
+      <LI>close the piped output stream=20
+      <LI>hand the now-full piped input stream to someone else to read=20
+    </LI></UL>Calls to <CODE>reverse()</CODE> and <CODE>sort()</CODE> =
+can be=20
+    cascaded together so that the output from one method can be the =
+input for=20
+    the next method. In fact, the test program <A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/betaclasses/RhymingWo=
+rds.java">RhymingWords</A>=20
+    does just that, cascading calls to <CODE>reverse()</CODE>,=20
+    <CODE>sort()</CODE>, and then <CODE>reverse()</CODE> to generate a =
+list of=20
+    rhyming words:=20
+    <BLOCKQUOTE><PRE>DataInputStream words =3D new DataInputStream(new =
+FileInputStream("words"));
+InputStream rhymedWords =3D =
+StringUtils.reverse(StringUtils.sort(StringUtils.reverse(words)));
+</PRE></BLOCKQUOTE>When you run RhymingWords on <A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/betaclasses/words.txt=
+">this=20
+    file of words</A> you will see this output:=20
+    <BLOCKQUOTE><PRE>Java
+interface
+image
+language
+communicate
+integrate
+native
+string
+network
+stream
+program
+application
+animation
+exception
+primer
+container
+user
+graphics
+threads
+tools
+class
+bolts
+nuts
+object
+applet
+environment
+development
+argument
+component
+input
+output
+anatomy
+security
+</PRE></BLOCKQUOTE>If you look closely you can see that "rhyming" words =
+such=20
+    as environment, development, argument and component are grouped =
+together.=20
+  </BLOCKQUOTE><A name=3DFILES>
+  <H4>Using Streams to Read and Write Files</H4></A>
+  <BLOCKQUOTE>File streams are perhaps the easist streams to understand. =
+
+    Simply put, FileInputStream (FileOutputStream) represent an input =
+(output)=20
+    stream on a file that lives on the native file system. You can =
+create a file=20
+    stream from the filename, a File object or a FileDescriptor object. =
+Use=20
+    these streams to read data from or write data to files on the file =
+system.=20
+    <P>This small example uses the file streams to copy the contents of =
+<A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/betaclasses/farrago.t=
+xt">one=20
+    file</A> into another.=20
+    <BLOCKQUOTE><PRE>import java.io.*;
+
+class FileStreamsTest {
+    public static void main(String args[]) {
+	try {
+	    FileInputStream fis =3D new FileInputStream("farrago.txt");
+	    FileOutputStream fos =3D new FileOutputStream("outagain.txt");
+	    int c;
+
+	    while ((c =3D fis.read()) !=3D -1) {
+	       fos.write(c);
+	    }
+
+	    fis.close();
+	    fos.close();
+	} catch (FileNotFoundException e) {
+	    System.err.println("FileStreamsTest: " + e);
+	} catch (IOException e) {
+	    System.err.println("FileStreamsTest: " + e);
+	}
+    }
+}
+</PRE></BLOCKQUOTE></BLOCKQUOTE><A name=3DMEMORY>
+  <H4>Using Streams to Read and Write Memory Locations</H4></A>
+  <BLOCKQUOTE>Use ByteArrayInputStream and ByteArrayOutputStream to read =
+and=20
+    write 8-bit data. You create these streams on an existing byte array =
+and=20
+    then use the <CODE>read()</CODE> and <CODE>write()</CODE> methods to =
+read=20
+    from or write data to the array in memory. Other streams operate on =
+Unicode=20
+    data.=20
+    <P>Use StringBufferInputStream to read data from a StringBuffer. You =
+create=20
+    stream on an existing StringBuffer object and then use the=20
+    <CODE>read()</CODE> methods to read from StringBuffer as it lives in =
+memory.=20
+    This stream is similar to the ByteArrayInputStream which reads 8-bit =
+data=20
+    from a byte array in memory. StringBufferInputStream reads 16-bit =
+Unicode=20
+    data from a string buffer in memory.=20
+    <P>[PENDING: write example for one of these.] </P></BLOCKQUOTE><A =
+name=3DCAT>
+  <H4>Using Streams to Concatenate Files</H4></A>
+  <BLOCKQUOTE>The SequenceInputStream creates a single input stream on=20
+    multiple input sources. This example program, <A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/betaclasses/Concatena=
+te.java">Concatenate</A>=20
+    implements a concatenation utility similar to Unix's =
+<CODE>cat</CODE>=20
+    command-- it concatenates files together in the order they are =
+listedon the=20
+    command line.=20
+    <P>This is the main program of the Concatenate utility:=20
+    <BLOCKQUOTE><PRE>import java.io.*;
+
+class Concatenate {
+    public static void main(String args[]) {
+	ListOfFiles mylist =3D new ListOfFiles(args);
+
+        try {
+	    SequenceInputStream s =3D new SequenceInputStream(mylist);
+            int c;
+
+            while ((c =3D s.read()) !=3D -1) {
+               System.out.write(c);
+            }
+
+            s.close();
+        } catch (IOException e) {
+            System.err.println("Concatenate: " + e);
+        }
+    }
+}
+</PRE></BLOCKQUOTE>Concatenate creates a <A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/betaclasses/ListOfFil=
+es.java">ListOfFiles</A>=20
+    object from the filenames listed on the command line by the user.=20
+    ListOfFiles is an Enumeration that maintains a list of the filenames =
+the=20
+    user wishes to concatenate together. An Enumeration object is needed =
+to=20
+    create the SequenceInputStream. This Enumeration object, the =
+ListOfFiles=20
+    object in our example, provides a series of InputStreams to the=20
+    SequenceInputStream as needed.=20
+    <P>After the <CODE>main()</CODE> method creates the =
+SequenceInputStream, it=20
+    reads from the stream a byte at a time. Whenever the =
+SequenceInputStream=20
+    runs off the end of one InputStream in the Enumeration, it calls=20
+    <CODE>nextElement()</CODE> on the Enumeration object to get the next =
+one.=20
+    ListOfFiles creates FileInputStream objects lazily, meaning that =
+whenever=20
+    SequenceInputStream calls <CODE>nextElement()</CODE> ListOfFiles =
+opens a=20
+    FileInputStream on the next filename and returns the stream. When =
+the=20
+    ListOfFiles runs out of files to read (it has no more elements) the =
+call to=20
+    SequenceInputStream's <CODE>read()</CODE> method returns -1 to =
+indicate the=20
+    end of input.=20
+    <P>Concatenate simply echos all the data read from the =
+SequenceInputStream=20
+    to the standard output.=20
+    <P><STRONG>Try this:</STRONG> Try running Concatenate on the <A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/betaclasses/farrago.t=
+xt"><CODE>farrago.txt</CODE></A>=20
+    and <A=20
+    =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/betaclasses/words.txt=
+"=20
+    <code>words.txt</CODE></A> files used as input to other examples in =
+this=20
+    lesson. </P></BLOCKQUOTE>
+  <H4>See Also</H4>
+  <BLOCKQUOTE><A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.PipedInputStream.html=
+"><IMG=20
+    height=3D20 =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/apiIcon.gif"=20
+    width=3D20 border=3D0></A> <A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.PipedInputStream.html=
+">java.io.PipedInputStream</A><BR><A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.PipedOutputStream.htm=
+l"><IMG=20
+    height=3D20 =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/apiIcon.gif"=20
+    width=3D20 border=3D0></A> <A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.PipedOutputStream.htm=
+l">java.io.PipedOutputStream</A>=20
+
+    <P><A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.FileInputStream.html"=
+><IMG=20
+    height=3D20 =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/apiIcon.gif"=20
+    width=3D20 border=3D0></A> <A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.FileInputStream.html"=
+>java.io.FileInputStream</A><BR><A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.FileOutputStream.html=
+"><IMG=20
+    height=3D20 =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/apiIcon.gif"=20
+    width=3D20 border=3D0></A> <A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.FileOutputStream.html=
+">java.io.FileOutputStream</A><BR>
+    <P><A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.ByteArrayInputStream.=
+html"><IMG=20
+    height=3D20 =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/apiIcon.gif"=20
+    width=3D20 border=3D0></A> <A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.ByteArrayInputStream.=
+html">java.io.ByteArrayInputStream</A><BR><A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.ByteArrayOutputStream=
+.html"><IMG=20
+    height=3D20 =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/apiIcon.gif"=20
+    width=3D20 border=3D0></A> <A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.ByteArrayOutputStream=
+.html">java.io.ByteArrayOutputStream</A><BR>
+    <P><A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.SequenceInputStream.h=
+tml"><IMG=20
+    height=3D20 =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/apiIcon.gif"=20
+    width=3D20 border=3D0></A> <A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.SequenceInputStream.h=
+tml">java.io.SequenceInputStream</A><BR><A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.StringBufferInputStre=
+am.html"><IMG=20
+    height=3D20 =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/apiIcon.gif"=20
+    width=3D20 border=3D0></A> <A=20
+    =
+href=3D"http://www.javasoft.com/JDK-1.0/api/java.io.StringBufferInputStre=
+am.html">java.io.StringBufferInputStream</A>=20
+    </P></BLOCKQUOTE></BLOCKQUOTE>
+<P>
+<HR SIZE=3D4>
+
+<P>
+<TABLE width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD align=3Dleft><A=20
+      =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/overview.html"><IMG=20
+      height=3D26 alt=3D"Previous | "=20
+      =
+src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/PreviousArrow.gif"=20
+      width=3D26 align=3Dtop border=3D0></A><A=20
+      =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/filtered.html"><IMG=20
+      height=3D26 alt=3D"Next | "=20
+      src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/NextArrow.gif" =
+width=3D26=20
+      align=3Dtop border=3D0></A><A=20
+      href=3D"http://scv.bu.edu/Doc/Java/tutorial/index.html"><IMG =
+height=3D26=20
+      alt=3D"Trail Map | "=20
+      src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/WayUpArrow.gif" =
+width=3D26=20
+      align=3Dtop border=3D0></A><A=20
+      href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/index.html"><IMG =
+height=3D26=20
+      alt=3D"Writing Java Programs | "=20
+      src=3D"http://scv.bu.edu/Doc/Java/tutorial/images/javaHeader.gif" =
+width=3D26=20
+      align=3Dtop border=3D0></A> </TD>
+    <TD align=3Dright><A=20
+      =
+href=3D"http://scv.bu.edu/Doc/Java/tutorial/java/io/index.html"><STRONG><=
+EM>Input=20
+      and Output Streams</EM></STRONG></A>=20
+</TD></TR></TBODY></TABLE></P></BODY></HTML>
+
+------=_NextPart_000_0000_01C883C1.1FDF8C10
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://scv.bu.edu/Doc/Java/tutorial/images/PreviousArrow.gif
+
+R0lGODdhGgAaAPUAAPf8//Hy9+34/+bu/97e3tbW3tLh+87W3snN28TS9LvG3LG52ae856XG56O4
+96Cu1p2nwJy955y155S155St54+o2Y+awIyt54yl54ea1oSl54Sc54OVwn6LvHuc53uU53uT2nuM
+53OM53OM3nOE1nKM03KE3m+BvWuE1muEzmt7zmN7zmN7xmN7vV9zvV50sV5zxlBouEpgrUpaljdP
+nwokeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAGgAaAAAG/sCGsBEpFiWSiZJC
+uTgxUI1mkxkaj8llswnFSDdg4TWCVE6Y3MolqslQiUYJ2TypoCVM7xTsGSMrEQABAQCFhgNTbhke
+IFdJFRWEBYaUCWAbHhsgfUeQGYUDC5SGEoqMjEd1JQEJJzKfowAYfBkfIB9IEhUnFgcuMhaTsYuL
+H8YjfyAvFgbBsQ8AA3y2HyMhjx3AsQAKLzWFm7e2ISNKuzIQlAEP3jXfANQgIuTlFBks2oIL7e79
+/tUjRjTJ0EIbAn7+EtYQEdDEwIIWoiV40EJhQoYkUDyU0UEiA138HDBg4WLFCBMZUTi5J+PEoQQM
+GOyrkUABCxYoSOhEkeJCnoUMrl6MMgBTJgABGXIqTaECSoYUMmbEGgBTQSEGJVBkZdr0J1QahKYO
+AJWSKwsvG0rIoGGBwDZKSVMwvdkmbQwaM/DKeHGig98OHDJUGGGWBQwpGUCweCFjbVQakGk0ZqFC
+roqbMFpcAgGC500XMVy8iDHaBQumK26SdEFFEyMQI7KimJ1iRW0VuFW72A0mnK2AwDOSsHyZRYvd
+ooMAADs=
+
+------=_NextPart_000_0000_01C883C1.1FDF8C10
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://scv.bu.edu/Doc/Java/tutorial/images/NextArrow.gif
+
+R0lGODdhGgAaAPUAAPf8//Hy9+34/+bu/97e3tbW3tLh+8nN28TS9LvG3LHI+bG52ae856XG56Cu
+1p2nwJy955y155S155St54+o2Y+awIyt54yl54ea1oSl54Sc54OVwn6LvHuc53uU53uT2nuM53OM
+53OM3nOE1nKM03KE3m+BvWuE1muEzmt7zmN7zmN7xmN7vV9zvV50sV5zxlBouEpgrUpaljdPnwok
+eQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAGgAaAAAG/sCGsAEpFiMRiXIy
+sTgv0ExGgxkaj8llswm9SDVg4fWolDCblq43g6ESjREIQ56cUJiU7hfcGSMHAIGCAQEAFBhTbRgd
+H1dIEgiCkgUAAhgfix0aH31YSg2SggmAASQfnKieShGhgRguHAgBKCQYHh8eSFlmFq0ABQ4wMQUY
+KyIeHiKPWhaFDq0DCQYbMCgiIiC7Z70ANC4JvhUxxtdlTE7cNOouDoWCDzEvJOVmE+r3+OsL7hUz
+LSfXtuUbuO4AAHH/RJQ4Z4EgPhYOFADq9+/EiS1QPrRYwSDCPRcUIjBAAIiDPxQWLTShkOGDiRUI
+EHhjQJOkIBP+UpxA8eRClZtahRbUNBDKhYwXKlCk0MNGQyQADBTYDCUjRgsVKZZGSQQIwAB3oQLM
+8Id1xdY2E3xJItDP6oq3UqZQuRCBwgYOeDmYcBFDxtgZ8d62kNuG0QcUMPz+9RsDcAwYglmAmYzr
+wwkVL1q0gMHZBQzNLV6wYKGZyqYOt5KRGGExq4rXb9+SLn0a160Q10Sw3pk1hWzQLoIAADs=
+
+------=_NextPart_000_0000_01C883C1.1FDF8C10
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://scv.bu.edu/Doc/Java/tutorial/images/WayUpArrow.gif
+
+R0lGODdhGgAaAPUAAPf8/+34/+bu/9Lh+8TS9LHI+aXG56O495y955y155S155St54+o2Y6o9oyt
+54yl54ea1oSl54Sc74Sc53uc53uU53uT2nOU53OM53OM3nKM03KE3muE1muEzmN7zmN7xl9zvV5z
+xlBouEpgrTdPnyQ6jiA0fwokeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAGgAaAAAG/kCD0IAoFhMJhXKx
+cDgf0EhkAhkaj8llswllRCCTsPCKQCoVzKbj4QVPLGCiMQGo2+/4usZCIdsHgAMBdwGAAgAnIXtX
+dgSOBHkAhQAmIyEcFkaNAwKCAYd5JyOWGRVHIwJKHh0dHh5OBQUUERQcAiMiHBkWSEkjAwqsHx8e
+FLEEFQcFER4DIhIZGGZKvw4WGq0TErEHEt4UqCHQWQoOdQQFAwQDdwKfnQC4HhhnC3Xq6wSgkpx2
+orkZltxTB4jAoEiVLHHYkAbVA1atXHXYM6GChgzN5C1k4uQXBA8VJHAYxiGCBAoXMHAIcSuEBw5b
+1qDSEKGBB5IUJtDiwEEEookBJlw64PJgYCB2djodrCTi1ZqikgR0MiToHqgTJES4hAIVj1RAeUxk
+bfqBK6oJsQpUsOCKg4cGcBtQuGVpWJQIvwooK4CRQ4MQcRucvKX1g5Qp4AboPUAhQ4gQJONK8EAY
+xBQqFjL8ksq5s2dOJ0SEgZAT46gTJU6gVp169eoSI8KEsVDBsQgRuEbhHjWCBG/eYPiszezKw+Pj
+IW4rv40rCAA7
+
+------=_NextPart_000_0000_01C883C1.1FDF8C10
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://scv.bu.edu/Doc/Java/tutorial/images/javaHeader.gif
+
+R0lGODdhGgAaAPUAAPf8//Hy9+34/+bu/9Lh+87W3sTS9LvG3LHI+bG52ae856XG56O496Cu1py9
+55y155S155St54+o2Y6o9oyt54yl54ea1oSl54Sc54OVwnuc53uU53uT2nuM53OM53OM3nOE1nKM
+03KE3m+BvWuE1muEzmt7zmN7zmN7xmN7vV9zvV50sV5zxlBouEpgrTdPnyQ6jiA0fxUcWAokeQAA
+OwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAGgAaAAAG/sCFcOEoFh8PiDIS
+oTgr0MsFYxkaj8llswmtSDFg4dWBVEKYTUrXe7FQiUZk9sx8Rr9gzVWSSbleLzExMDAvLislFlJu
+FhocRQ0jfyshDAQBAgEDCBgqgCmNGI56DiktEQYEAwEAra2ZAwQTLiwPChEbjw4wBZqcLzM0NDIw
+LSEXCJcMrhUbDw4rGAAuwsIyw9UyL6sTgBMHHUgSLwQCEy0wMzLrMzEuJAgDBoYtJwThSiMprq2a
+/PIGXJTIReCABzMSWhDgx4+AAQQQYVSIgABAhQ9LKIwIwdCVvGQGlhkA9+EDGgoSVCzsCJAAgwks
+WrQg8UFEnSYlPnQEEGvAwoZ3M2uGIBEBggIDAwakWNmRQAsDDy9+IEGCAtJWA0ygsNSQAQkXPHka
+GFqCAlNNDDZ4IvSixQcGA1wFMGChhAkJKQyw2ulKQKxL8hK0MGGiggoXH67uJKAqqQEFLAxphSIJ
+EIoNDJAmZYygwok/hQajQCFlCocRLUATGsSWngm7o1lMoSIKw4bbHDx0KPkBBAiqsFGwSAGmOIdc
+uTzw7g1c62gUKlTQ5qABee7lv0nYdQ49Ohjqx5Njb+48RXQVK4IAADs=
+
+------=_NextPart_000_0000_01C883C1.1FDF8C10
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://scv.bu.edu/Doc/Java/tutorial/images/apiIcon.gif
+
+R0lGODdhIAAgAPcAAK4A/7MQ/7gg/70w/8JA/8dQ/8xg/9Jw/9Z//9uP/+Gf/+av/+u///DP//Xf
+//rv/////wBfAADcAC+wAP8A7/8A//8AoP8BAAAAABQAAIUAYIAIAO/vAP//AOnpAOAAAO/v73Fx
+eMzQDvSEsO8AQf8AEOkAEOgDggAA7wAUWgCDwgOgpADv7wD/WgDowgDgqADvAAOMAAAAYAsAAAD/
+AADpAJMAAABxAADMAE70AAAIAA8AAIQAAAADAE4AAAEAW38AAP8AAOMAAO8A7+sA6UgAyBMAAIcA
+AMAA8+8AQHIAAIAAAFwAABRrAH7jAJAwAP9r/+rj6ewwWAAC7xQAZIMAK6AAKAAAQAAAwwEAiPAA
+AAEAAO8AQ/8BMOpDAEDwAAFyADyAAIhcAAAUqQB+AACQAAP/ABvqAC4oAAEAQwEAQRcAwxQgeQAA
+NwAA4AAAgAAOACkAIAD/RgD/qgD/twD/YQLvvw3/bwHpRNpg9gDvPABxkQDVTx1kAgoAWXAAABAA
+AAAAvwAAbwAANAAADgAAJwsAEAAA8xgAAVAAAJIATwIAdgAAZQAAcgAAd5wAaZ8AdIEAZaQAIAEA
+eAEAaaYAcwQAdBoAaQBAbgAAZ4cAILQAZgAAaQAAbAQXZTkUIC8IJ4wAL0gAaPgAbwDvbQJyZfiA
+L4xcbS8AZYwAbUgAL/gAaQAAbQIAYeIAZ6ABZS8Ic0gAYfgAcH8Aaf8ASf8AY+MAbwDvbgBfLiDs
+ZwD3aQDvZgBfJwDrPwT4AABfawDj4wBoMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAAIAAgAAAI9gAhCBxI
+sKDBgwgTKlzIsKHDhxAjOkDAICJDBgAQWFw4seLGjwwQECBwwAFBBAoeJChAIMGDgR0PHgAAYCSA
+AAsGAhgwIACBATsbCMSosWCDnS8hNAggQCdSgQpqDs1okAGBnAMJAHBqcqABAEKJLnywIMBWgQCa
+EoyaU6zBBgaA0qSpk0BBsW4JLqBJAGUDrXXvAkgAIe/AnkKznoWws2ACABUNo7U78IFZrgQJBJha
+lCBigQ7kOh2QNKoBzgb3+gRKMihjAWY1Py1MteoBkjkfGChgsqaD2wUUEIwZUerHhMaPH0yuvCDJ
+5tCjS59Ovbr169UDAgA7
+
+------=_NextPart_000_0000_01C883C1.1FDF8C10--

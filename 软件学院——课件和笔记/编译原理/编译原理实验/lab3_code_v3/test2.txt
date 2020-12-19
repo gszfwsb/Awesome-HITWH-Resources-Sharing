@@ -1,0 +1,72 @@
+proc fuction1;
+begin
+    integer f11;
+    real f12;
+
+    proc fuction2;
+    begin
+        integer[7][6] arr;
+        integer m;
+        integer n;
+        integer a;
+        integer b;
+        integer c;
+        integer d;
+        real e;
+        record real re1; integer re2; end r1;
+        
+        integer x;
+        integer y;
+        integer z;
+        integer z;  // Duplicate definition
+    
+        
+        while a<b do 
+            begin
+                if c<d then 
+                    begin
+                        x=y+z; 
+                    end
+                else 
+                    begin
+                        x=y*z;
+                    end
+            end
+    
+        while a<b do 
+            begin
+                if c<5 then 
+                    begin
+                        while x>y do 
+                            begin
+                                z=x+1;
+                            end
+                    end 
+                else 
+                    begin
+                        x=y;
+                    end
+            end
+        
+        
+        arr[3][5] = 2;
+        m=(m+n)*9;
+        
+         
+        e = e + a; // real = real + int , Type conversion
+        
+        call a(1,2+1,a*b);   //Common variable with call
+        e1 = 7;  // e1 Undefined
+        a = e2;  // e2 Undefined
+        a[0] = 1;  // Non-array using array operators
+        e3[9] = 1;  // e3 Undefined
+        a = a + arr; // int = int + array, Integer variables are added to array variables 
+    
+    end
+    f11 = 1;
+    call fuction2(1,2+1,a*b);
+end
+      
+       
+        
+        

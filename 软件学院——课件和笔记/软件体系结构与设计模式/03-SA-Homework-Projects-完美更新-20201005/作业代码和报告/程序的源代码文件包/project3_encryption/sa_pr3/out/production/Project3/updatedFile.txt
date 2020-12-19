@@ -1,0 +1,28 @@
+ Computer $6800 Taiwan 1987-12-11
+
+ Computer $7200 Taiwan 1995-12-11
+
+ Printer $3300 Germany 1989-02-01
+
+ Printer $3600 Germany 1988-12-01
+
+ Printer $3800 Japan 1995-12-11
+
+ Refrigerator $3300 Germany 1989-02-01
+
+ Refrigerator $3300 Germany 1989-02-01
+
+ Refrigerator $3600 Germany 1988-12-01
+
+ Refrigerator $3800 Japan 1995-12-11
+
+ Refrigerator $3800 Taiwan 1995-12-11
+
+ TV $13300 Germany 1978-02-01
+
+ TV $8600 Germany 1979-12-01
+
+ Washing Machine $3800 Japan 1967-12-11
+
+ Washing Machine $3800 Republic of China 1995-12-11
+
