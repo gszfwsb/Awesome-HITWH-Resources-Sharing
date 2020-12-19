@@ -3,10 +3,10 @@
 
 This project aims to provide high quality resource sharing to HITwh students
 ## contents： :scream: :scream: :scream: 
-1. Software college courseware & notes of senior students
+1. Slides & Memos
 2. Lecture notes
 
-## Software college courseware & notes of senior students
+## Slides and Memos:
 - contributor：wsb 
 
 - contact：181110315@stu.hit.edu.cn 
