@@ -13,7 +13,7 @@ This project aims to provide high quality resource sharing to HITwh students
 
 - content：
 
-  ![image-20201219102247912](D:%5CAwesome-HITWH-Resources-Sharing%5CREADME.assets%5Cimage-20201219102247912.png)
+  ![image-20201219102247912](https://i.loli.net/2020/12/19/xHFTGlybQaSmd5i.png)
 
 ## 计软语你讲师团  person in charge: wsb
 - bilibili homepage：HITwh软18语你讲师团 :eyes: :eyes: :eyes:
