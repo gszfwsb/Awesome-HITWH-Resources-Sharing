@@ -1,0 +1,2 @@
+model_checkpoint_path: "my_time_series_model"
+all_model_checkpoint_paths: "my_time_series_model"
