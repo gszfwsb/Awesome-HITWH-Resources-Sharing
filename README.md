@@ -1,15 +1,9 @@
 # News
-
-:green_apple:I created a book for students to enhance their quality of life and work. Click the link below.:apple:
-
-[奇淫技巧：旨在提供高质量工作生活方式](https://hiterwsb.gitbook.io/broken-thoughts/)
-
->关于提高下载速度的方式：请见该文提到的插件，Enhanced Github
+:green_apple:I created a book for students to enhance their quality of life and work, TBD. Under construction...
 
 # Introduction
-
-
 This project aims to provide high quality resource sharing to HITwh students
+
 ## Content：
 1. Slides & Memos
 2. Lecture notes
