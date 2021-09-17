@@ -3,12 +3,8 @@
 
 # Introduction
 - This project aims to provide high quality resource sharing to HIT students
-  - Slides
-  - Memos
-  - Lecture notes
-  - Other resouces(but please do not copy without confirmation :) 
-- Lecture Group: bilibili homepage：HITwh软18语你讲师团
-https://space.bilibili.com/478354813?
+  - SlidesMemos, Lecture notes, Other resouces(but please do not copy without confirmation :) 
+  - Lecture Group: bilibili homepage：HITwh软18语你讲师团 https://space.bilibili.com/478354813?
 # Content
 For convenience, you may use AliYunDrive (阿里网盘) links to reach the following resources: Some TBD. Please contact me if you need one not in the following list!
 1. Cpp language: https://www.aliyundrive.com/s/TTKo2s81w3c
