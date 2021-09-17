@@ -6,8 +6,7 @@ This project aims to provide high quality resource sharing to HIT students
 1. Slides
 2. Memos
 3. Lecture notes
-4. Some of my personal homework(please do not copy without confirmation :) 
-  ![image-20201220180620753](https://i.loli.net/2020/12/20/5nZpCX6OxjsqELI.png)
+4. Other resouces(but please do not copy without confirmation :) 
 5. Lecture Group:
 - bilibili homepage：HITwh软18语你讲师团
 
