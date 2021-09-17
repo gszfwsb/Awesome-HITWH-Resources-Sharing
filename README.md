@@ -37,4 +37,4 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
   - email: 181110315@stu.hit.edu.cn and hiterwsb@gmail.com
   - twitter: @Shaobowang6
 
-There is NO FREE LUNCH in the world. Cherish all the opportunities. Make a better campus life :)
+🍎 There is NO FREE LUNCH in the world. Cherish all the opportunities. Make a better campus life :)
