@@ -3,10 +3,10 @@
 
 # Introduction
 - This project aims to provide high quality resource sharing to HIT students
-1. Slides
-2. Memos
-3. Lecture notes
-4. Other resouces(but please do not copy without confirmation :) 
+  1. Slides
+  2. Memos
+  3. Lecture notes
+  4. Other resouces(but please do not copy without confirmation :) 
 - Lecture Group: bilibili homepage：HITwh软18语你讲师团
 https://space.bilibili.com/478354813?
 # Content
