@@ -1,3 +1,0 @@
-从序列流中读取数据时, 将从被整合的第一个流开始读, 
-读完一个之后继续读第二个, 以此类推
-SequenceInputStream(InputStream s1, InputStream s2)

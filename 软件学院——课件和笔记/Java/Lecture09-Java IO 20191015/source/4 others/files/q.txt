@@ -1,3 +1,0 @@
-如果检测到反序列化后的类的serialVersionUID
-和对象二进制流的serialVersionUID不同，则会抛出异常。
-此ID相当于版本号；

@@ -1,6 +1,0 @@
-abcdefgh从序列流中读取数据时, 将从被整合的第一个流开始读, 
-读完一个之后继续读第二个, 以此类推
-SequenceInputStream(InputStream s1, InputStream s2)
-如果检测到反序列化后的类的serialVersionUID
-和对象二进制流的serialVersionUID不同，则会抛出异常。
-此ID相当于版本号；
