@@ -1,12 +1,9 @@
-# News
-:green_apple:I am writing a book for students to enhance quality of both life and work, TBD. Under construction...
-
 # Introduction
-- This project aims to provide high quality resource sharing to HIT students
+- This project aims to provide high quality resources for students in HIT
   - Slides, Memos, Lecture notes, Other resouces(but please do not copy without confirmation :) 
   - Lecture Group: bilibili homepage：HITwh软18语你讲师团 https://space.bilibili.com/478354813?
 # Content
-For convenience, you may use AliYunDrive (阿里网盘) links to reach the following resources: Some TBD. Please contact me if you need one not in the following list!
+For convenience, you may use AliYunDrive (阿里网盘) links to reach the following resources. However, there may be some missing lessons. Please contact me if you need one not in the following list.
 1. Cpp language: https://www.aliyundrive.com/s/TTKo2s81w3c
 2. Java language: https://www.aliyundrive.com/s/ncvF3qHXEFS
 3. python: https://www.aliyundrive.com/s/JwdCbgTS4ZQ
