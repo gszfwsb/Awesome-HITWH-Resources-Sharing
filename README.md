@@ -28,7 +28,7 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
 22. 近代史等（四门）：https://www.aliyundrive.com/s/ALva6T5n9HS
 23. 软件开发过程与项目管理：https://www.aliyundrive.com/s/2VfFhHmmBgt
 24. 并行计算：https://www.aliyundrive.com/s/fskShCUCvKQ
-
+25. 互联网开发技术：https://www.aliyundrive.com/s/fJJHxhp5dGk
 # Contact
 - You can reach me in the following ways:
   - email: 181110315@stu.hit.edu.cn and hiterwsb@gmail.com
