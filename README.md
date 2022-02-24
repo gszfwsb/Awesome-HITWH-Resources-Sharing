@@ -19,7 +19,7 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
 13. 数字电路：https://www.aliyundrive.com/s/sNLbdn8PYgd
 14. 编译原理：https://www.aliyundrive.com/s/W4xEWNqwaA1
 15. 计算机网络：https://www.aliyundrive.com/s/gLuqqZY4u4c
-16. 面向对象建模：https://www.aliyundrive.com/s/uBMSgBnsfMq
+16. 面向对象建模：https://www.aliyundrive.com/s/L3GYgeqAmhX
 17. 系统分析与设计：https://www.aliyundrive.com/s/LeptrnDmucy
 18. 软件体系结构与设计模式：https://www.aliyundrive.com/s/rNcHLnEaPuR
 19. 软件工程概论: https://www.aliyundrive.com/s/WMew6RRcoBW
