@@ -1,7 +1,7 @@
 # Introduction
-- This project aims to provide high quality resources for students in HIT
-  - Slides, Memos, Lecture notes, Other resouces(but please do not copy without confirmation :) 
-  - Lecture Group: bilibili homepage：HITwh软18语你讲师团 https://space.bilibili.com/478354813?
+This project aims to provide high quality resources for students in School of Software, HIT
+- Slides, Memos, Lecture notes, Other resouces(but please do not copy without confirmation :) 
+- Lecture Group: bilibili homepage：HITwh软18语你讲师团 https://space.bilibili.com/478354813?
 # Content
 For convenience, you may use AliYunDrive (阿里网盘) links to reach the following resources. However, there may be some missing lessons. Please contact me if you need one not in the following list.
 
@@ -35,8 +35,8 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
 | 软件质量测试           | https://www.aliyundrive.com/s/vtbWkWDkzDN | 考试 |
 
 # Contact
-- You can reach me in the following ways:
-  - email: 181110315@stu.hit.edu.cn and hiterwsb@gmail.com
-  - twitter: @Shaobowang6
+You can reach me in the following ways:
+- email: 181110315@stu.hit.edu.cn and hiterwsb@gmail.com
+- twitter: @Shaobowang6
 
 🍎 There is NO FREE LUNCH in the world. Cherish all the opportunities. Make a better campus life :)
