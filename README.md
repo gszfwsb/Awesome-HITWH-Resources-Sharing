@@ -7,8 +7,8 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
 
 | 课程名                 | 链接                                      | 类型 |
 | ---------------------- | ----------------------------------------- | ---- |
-| C++                    | https://www.aliyundrive.com/s/TTKo2s81w3c | 选修 |
-| Java                   | https://www.aliyundrive.com/s/ncvF3qHXEFS | 限选 |
+| C++                    | https://www.aliyundrive.com/s/TTKo2s81w3c | 考察 |
+| Java                   | https://www.aliyundrive.com/s/ncvF3qHXEFS | 考试 |
 | Python                 | https://www.aliyundrive.com/s/JwdCbgTS4ZQ | 限选 |
 | 工科数学分析（微积分） | https://www.aliyundrive.com/s/mopaNhSfzqz | 考试 |
 | 线性代数               | https://www.aliyundrive.com/s/XJbdZTx7H6C | 考试 |
@@ -33,7 +33,7 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
 | 并行计算               | https://www.aliyundrive.com/s/fskShCUCvKQ | 考察 |
 | 互联网开发技术         | https://www.aliyundrive.com/s/fJJHxhp5dGk | 考察 |
 | 软件质量测试           | https://www.aliyundrive.com/s/vtbWkWDkzDN | 考试 |
-
+| 服务使能技术（服务科学） | https://www.aliyundrive.com/s/rGwihWi4Yoc | 考试 |
 # Contact
 You can reach me in the following ways:
 - email: 181110315@stu.hit.edu.cn and hiterwsb@gmail.com
