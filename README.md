@@ -1,3 +1,5 @@
+# Caution
+因语你讲师团成员均已毕业，如果想要接手这个project的欢迎联系：hiterwsb@gmail.com
 # Introduction
 This project aims to provide high quality resources for students in School of Software, HIT
 - Slides, Memos, Lecture notes, Other resouces(but please do not copy without confirmation :) 
