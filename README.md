@@ -38,8 +38,8 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
 You can reach me in the following ways:
 - email: 181110315@stu.hit.edu.cn(毕业已停用) and hiterwsb@gmail.com
 - twitter: @Shaobowang6
-# Some personal notes:
-- [操作系统2020年笔记](https://gszfwsb.github.io/files/os/os.html)
-- [计算机网络系统2020年笔记](https://gszfwsb.github.io/files/cn/cn.html)
+# Some notes:
+- [操作系统2020年笔记-wsb](https://gszfwsb.github.io/files/os/os.html)
+- [计算机网络系统2020年笔记-wsb](https://gszfwsb.github.io/files/cn/cn.html)
 
 🍎 There is NO FREE LUNCH in the world. Cherish all the opportunities. Make a better campus life :)
