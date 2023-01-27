@@ -36,7 +36,7 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
 | 服务使能技术（服务科学） | https://www.aliyundrive.com/s/rGwihWi4Yoc | 考试 |
 # Contact
 You can reach me in the following ways:
-- email: 181110315@stu.hit.edu.cn and hiterwsb@gmail.com
+- email: 181110315@stu.hit.edu.cn(毕业已停用) and hiterwsb@gmail.com
 - twitter: @Shaobowang6
 # Some personal notes:
 - [操作系统2020年笔记](https://gszfwsb.github.io/files/os/os.html)
