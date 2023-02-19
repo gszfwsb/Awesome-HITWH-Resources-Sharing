@@ -24,6 +24,7 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
 | 数字电路               | https://www.aliyundrive.com/s/sNLbdn8PYgd | 考试 |
 | 编译原理               | https://www.aliyundrive.com/s/W4xEWNqwaA1 | 考试 |
 | 计算机网络             | https://www.aliyundrive.com/s/gLuqqZY4u4c | 考试 |
+| 计算机网络-计科-大三上-刘扬老师 | https://www.aliyundrive.com/s/phdKDXbxuJJ | 考试 |
 | 面向对象建模           | https://www.aliyundrive.com/s/L3GYgeqAmhX | 考察 |
 | 系统分析与设计         | https://www.aliyundrive.com/s/LeptrnDmucy | 考试 |
 | 软件体系结构与设计模式 | https://www.aliyundrive.com/s/rNcHLnEaPuR | 考试 |
