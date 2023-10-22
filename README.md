@@ -1,6 +1,6 @@
 # Caution
-因语你讲师团成员均已毕业，如果想要接手这个project的欢迎联系：hiterwsb@gmail.com
-*部分失效资源可以从这里查询* [网盘](http://hitwh.cloud/) 账号密码都是stu
+因语你讲师团成员均已毕业，如果想要接手这个project的欢迎联系：hiterwsb@gmail.com。
+**部分失效资源可以从这里查询** [网盘](http://hitwh.cloud/) 账号密码都是stu
 # Introduction
 This project aims to provide high quality resources for students in School of Software, HIT
 - Slides, Memos, Lecture notes, Other resouces(but please do not copy without confirmation :) 
