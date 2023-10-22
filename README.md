@@ -1,5 +1,6 @@
 # Caution
-因语你讲师团成员均已毕业，如果想要接手这个project的欢迎联系：hiterwsb@gmail.com。
+因语你讲师团成员均已毕业，如果想要接手这个project的欢迎联系：shaobowang1009@alu.hit.edu.cn
+
 **部分失效资源可以从这里查询** [网盘](http://hitwh.cloud/) 账号密码都是stu
 # Introduction
 This project aims to provide high quality resources for students in School of Software, HIT
@@ -40,7 +41,7 @@ For convenience, you may use AliYunDrive (阿里网盘) links to reach the follo
 | 服务使能技术（服务科学） | https://www.aliyundrive.com/s/rGwihWi4Yoc | 考试 |
 # Contact
 You can reach me in the following ways:
-- email: 181110315@stu.hit.edu.cn(毕业已停用) and hiterwsb@gmail.com
+- email: shaobowang1009@alu.hit.edu.cn
 - twitter: @Shaobowang6
 # Some notes:
 - [操作系统2020年笔记-wsb](https://gszfwsb.github.io/files/os/os.html)
