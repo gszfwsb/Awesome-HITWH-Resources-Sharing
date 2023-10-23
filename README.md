@@ -7,7 +7,7 @@ This project aims to provide high quality resources for students in School of So
 - Slides, Memos, Lecture notes, Other resouces(but please do not copy without confirmation :) 
 - Lecture Group: bilibili homepage：HITwh软18语你讲师团 https://space.bilibili.com/478354813?
 # Content
-For convenience, you may use AliYunDrive (阿里网盘) links to reach the following resources. However, there may be some missing lessons. Please contact me if you need one not in the following list.
+Due to some issues of AliDrive, you can find the resources through Google Drive: [谷歌网盘](https://drive.google.com/drive/folders/1KN6TaueZ90QUUE57uLXJpJ4XPKxc8PN2?usp=sharing)
 
 | 课程名                 | 链接                                      | 类型 |
 | ---------------------- | ----------------------------------------- | ---- |
