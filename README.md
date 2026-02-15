@@ -43,8 +43,6 @@ Due to some issues of AliDrive, you can find the resources through Google Drive:
 You can reach me in the following ways:
 - email: shaobowang1009@alu.hit.edu.cn
 - twitter: @Shaobowang6
-# Some notes:
-- [操作系统2020年笔记-wsb](https://gszfwsb.github.io/files/os/os.html)
-- [计算机网络系统2020年笔记-wsb](https://gszfwsb.github.io/files/cn/cn.html)
+
 
 🍎 There is NO FREE LUNCH in the world. Cherish all the opportunities. Make a better campus life :)
